@@ -11,11 +11,33 @@ header{
 .workers{
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 .worker{
     display: flex;
     flex-direction: column;
-    align-items: center;
-    border: solid black 1px;
+    align-items: stretch;
+    border-radius: 5px;
+    width: 250px;
+    margin-bottom: 20px;
+}
+
+.title{
+    background-color: lightblue;
+    border-bottom: 1px black solid;
+    padding: 3px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    overflow-wrap: break-word;
+    box-shadow: 5px 10px 15px black;
+}
+
+.info{
+    background-color: lightgray;
+    padding: 3px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    overflow-wrap: break-word;
+    box-shadow: 5px 10px 15px black;
 }

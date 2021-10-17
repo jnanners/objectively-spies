@@ -31,11 +31,15 @@ class Generate{
             if(employees[i].getRole() === "Manager"){
                 const managerHTML = `
                 <div class='worker'>
-                    <h2>${this.employees[i].getName()}</h2>
-                    <h3>${this.employees[i].getRole()}</h3>
-                    <p>ID: ${this.employees[i].getId()}</p>
-                    <p>Email: <a href='mailto: ${this.employees[i].getEmail()}'>${this.employees[i].getEmail()}</a></p>
-                    <p>Office Number: ${this.employees[i].officeNumber}</p>
+                    <div class='title'>
+                        <h2>${this.employees[i].getName()}</h2>
+                        <h3>${this.employees[i].getRole()}</h3>
+                    </div>
+                    <div class='info'>
+                        <p>ID: ${this.employees[i].getId()}</p>
+                        <p>Email: <a href='mailto: ${this.employees[i].getEmail()}'>${this.employees[i].getEmail()}</a></p>
+                        <p>Office Number: ${this.employees[i].officeNumber}</p>
+                    </div>
                 </div>
                 `
                 employeeHTML.push(managerHTML);
@@ -43,11 +47,15 @@ class Generate{
             else if(employees[i].getRole() === "Engineer"){
                 const engineerHTML = `
                 <div class='worker'>
-                <h2>${employees[i].getName()}</h2>
-                <h3>${employees[i].getRole()}</h3>
-                <p>ID: ${this.employees[i].getId()}</p>
-                <p>Email: <a href='mailto: ${this.employees[i].getEmail()}'>${this.employees[i].getEmail()}</a></p>
-                <p>Github: <a href='https://github.com/${this.employees[i].getGithub()}' target='_blank'>${this.employees[i].getGithub()}</a></p>
+                    <div class='title'>
+                        <h2>${employees[i].getName()}</h2>
+                        <h3>${employees[i].getRole()}</h3>
+                    </div>
+                    <div class='info'>
+                        <p>ID: ${this.employees[i].getId()}</p>
+                        <p>Email: <a href='mailto: ${this.employees[i].getEmail()}'>${this.employees[i].getEmail()}</a></p>
+                        <p>Github: <a href='https://github.com/${this.employees[i].getGithub()}' target='_blank'>${this.employees[i].getGithub()}</a></p>
+                    </div>
                 </div>
                 `
                 employeeHTML.push(engineerHTML);
@@ -55,11 +63,15 @@ class Generate{
             else if(employees[i].getRole() === "Intern"){
                 const internHTML = `
                 <div class='worker'>
-                <h2>${employees[i].getName()}</h2>
-                <h3>${employees[i].getRole()}</h3>
-                <p>ID: ${this.employees[i].getId()}</p>
-                <p>Email: <a href='mailto: ${this.employees[i].getEmail()}'>${this.employees[i].getEmail()}</a></p>
-                <p>School: ${this.employees[i].getSchool()}</p>
+                    <div class='title'>
+                        <h2>${employees[i].getName()}</h2>
+                        <h3>${employees[i].getRole()}</h3>
+                    </div>
+                    <div class='info'>
+                        <p>ID: ${this.employees[i].getId()}</p>
+                        <p>Email: <a href='mailto: ${this.employees[i].getEmail()}'>${this.employees[i].getEmail()}</a></p>
+                        <p>School: ${this.employees[i].getSchool()}</p>
+                    </div>
                 </div>
                 `
                 employeeHTML.push(internHTML)
