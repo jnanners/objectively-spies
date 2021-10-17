@@ -30,7 +30,7 @@ test("returns engineer email", () => {
 test("returns users github", () => {
     const engineer = new    Engineer("Bart", "ID", "bartsimpson@krusty.com", "b-simp");
 
-    expect(engineer.getGithub()).toEqual(`github.com/b-simp`);
+    expect(engineer.getGithub()).toEqual(`b-simp`);
 })
 
 test("returns engineer role", () => {
